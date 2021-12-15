@@ -13,8 +13,8 @@ npm install https://github.com/Chatnels/chatnels-widgets-react-native.git
 ```js
 import { ChatnelsWidget } from "chatnels-widgets-react-native";
 
-// ...
 <ChatnelsWidget orgDomain={'string'}
                 sessionToken={'string'}
-                viewData={} />
+                viewData={}
+                onRequestSession={'function'} />
 ```

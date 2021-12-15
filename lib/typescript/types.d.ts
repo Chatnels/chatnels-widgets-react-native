@@ -31,5 +31,6 @@ export interface ChatnelsWidgetProps {
     viewData: ChatnelsViewData;
     sessionToken?: string;
     sessionDuration?: string;
+    onRequestSession?: () => void;
 }
 export {};
