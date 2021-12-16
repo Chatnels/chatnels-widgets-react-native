@@ -1,6 +1,6 @@
 {
   "name": "chatnels-widgets-react-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Chatnels Widgets for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -9,14 +9,13 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "repository": "https://github.com/jleechatnels/chatnels-widgets-react-native",
+  "repository": "https://github.com/chatnels/chatnels-widgets-react-native",
   "author": "Justin Lee <justin.lee@chatnels.com> (https://github.com/jleechatnels)",
   "bugs": {
     "url": "https://github.com/chatnels/chatnels-widgets-react-native/issues"
