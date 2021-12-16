@@ -16,5 +16,7 @@ import { ChatnelsWidget } from "chatnels-widgets-react-native";
 <ChatnelsWidget orgDomain={'string'}
                 sessionToken={'string'}
                 viewData={}
-                onRequestSession={'function'} />
+                onRequestSession={'function'}
+                // optionals
+                serviceProvider={'string'} />
 ```

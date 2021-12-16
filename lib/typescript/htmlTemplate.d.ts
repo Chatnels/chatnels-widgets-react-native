@@ -1,1 +1,1 @@
-export declare const htmlTemplate: (orgDomain: string, sessionToken?: string | undefined, initView?: any) => string;
+export declare const htmlTemplate: (orgDomain: string, serviceProvider: string, sessionToken?: string | undefined, initView?: any) => string;

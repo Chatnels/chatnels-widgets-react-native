@@ -28,6 +28,7 @@ interface LineConfigViewData {
 export declare type ChatnelsViewData = ChatViewData | FlowbotViewData | InboxViewData | LineConfigViewData;
 export interface ChatnelsWidgetProps {
     orgDomain: string;
+    serviceProvider?: string;
     viewData: ChatnelsViewData;
     sessionToken?: string;
     sessionDuration?: string;
