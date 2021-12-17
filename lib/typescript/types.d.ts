@@ -1,3 +1,9 @@
+interface ChannelFeedViewData {
+    type: 'channelFeed';
+    data: {
+        displayId: string;
+    };
+}
 interface ChatViewData {
     type: 'chat';
     data: {
@@ -16,16 +22,16 @@ interface InboxViewData {
 interface FlowbotViewData {
     type: 'flowbot';
     data: {
-        id: string;
+        botId: string;
     };
 }
 interface LineConfigViewData {
     type: 'lineConfig';
     data: {
-        id: string;
+        displayId: string;
     };
 }
-export declare type ChatnelsViewData = ChatViewData | FlowbotViewData | InboxViewData | LineConfigViewData;
+export declare type ChatnelsViewData = ChannelFeedViewData | ChatViewData | FlowbotViewData | InboxViewData | LineConfigViewData;
 export interface ChatnelsWidgetProps {
     orgDomain: string;
     serviceProvider?: string;
