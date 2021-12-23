@@ -1,46 +1,68 @@
-interface ChannelFeedViewData {
-    type: 'channelFeed';
-    data: {
-        displayId: string;
-        [key: string]: any;
-    };
+interface WildcardsMap {
+    [key: string]: any;
 }
-interface ChatViewData {
+interface ColorScheme extends WildcardsMap {
+    navbarColor: string;
+    navbarFontColor: string;
+}
+export interface ChannelFeedViewConfig {
+    type: 'channelFeed';
+    data: WildcardsMap & {
+        displayId: string;
+        feedId?: string;
+    };
+    options?: WildcardsMap;
+    colorScheme?: ColorScheme;
+}
+export interface ChatViewConfig {
     type: 'chat';
-    data: {
+    data: WildcardsMap & {
         displayId: string;
         chatId?: string;
-        [key: string]: any;
+    };
+    options?: WildcardsMap;
+    colorScheme?: ColorScheme;
+}
+interface InboxViewOptions extends WildcardsMap {
+    enableChatMenu?: boolean;
+    useExternalCreateChat?: boolean;
+    navbarProps?: {
+        enableBackBtn?: boolean;
+        title?: string;
     };
 }
-interface InboxViewData {
+export interface InboxViewConfig {
     type: 'inbox';
-    data?: {
+    data?: WildcardsMap & {
         displayId?: string;
         lineId?: string;
         chatId?: string;
-        [key: string]: any;
     };
+    options?: InboxViewOptions;
+    colorScheme?: ColorScheme;
 }
-interface FlowbotViewData {
+export interface FlowBotViewConfig {
     type: 'flowbot';
-    data: {
+    data: WildcardsMap & {
         botId: string;
-        [key: string]: any;
     };
+    options?: WildcardsMap;
+    colorScheme?: ColorScheme;
 }
-interface LineConfigViewData {
+export interface LineConfigViewConfig {
     type: 'lineConfig';
-    data: {
+    data: WildcardsMap & {
         displayId: string;
-        [key: string]: any;
     };
+    options?: WildcardsMap;
+    colorScheme?: ColorScheme;
 }
-export declare type ChatnelsViewData = ChannelFeedViewData | ChatViewData | FlowbotViewData | InboxViewData | LineConfigViewData;
+export declare type ChatnelsWidgetConfig = ChannelFeedViewConfig | ChatViewConfig | FlowBotViewConfig | InboxViewConfig | LineConfigViewConfig;
+export declare type ChatnelsWidgetOptions = InboxViewOptions;
 export interface ChatnelsWidgetProps {
     orgDomain: string;
     serviceProvider?: string;
-    viewData: ChatnelsViewData;
+    viewData: ChatnelsWidgetConfig;
     sessionToken?: string;
     sessionDuration?: string;
     onRequestSession?: () => void;
