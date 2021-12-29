@@ -1,6 +1,6 @@
 {
   "name": "chatnels-widgets-react-native",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Chatnels Widgets for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

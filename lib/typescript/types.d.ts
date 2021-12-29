@@ -1,3 +1,4 @@
+import type { WebViewErrorEvent } from 'react-native-webview/lib/WebViewTypes';
 interface WildcardsMap {
     [key: string]: any;
 }
@@ -65,7 +66,9 @@ export interface ChatnelsWidgetProps {
     viewData: ChatnelsWidgetConfig;
     sessionToken?: string;
     sessionDuration?: string;
-    onRequestSession?: () => void;
     onChatnelsEvent?: (name: string, data: any) => void;
+    onError?: (e: WebViewErrorEvent) => void;
+    onReady?: () => void;
+    onRequestSession?: () => void;
 }
 export {};
