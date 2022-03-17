@@ -3,8 +3,15 @@ interface WildcardsMap {
     [key: string]: any;
 }
 interface ColorScheme extends WildcardsMap {
-    navbarColor: string;
-    navbarFontColor: string;
+    navbarColor?: string;
+    navbarFontColor?: string;
+    networkStateBannerColor?: string;
+    networkStateBannerFontColor?: string;
+}
+interface ChatnelsClientOptions extends WildcardsMap {
+    networkStateBanner?: {
+        disable: boolean;
+    };
 }
 export interface ChannelFeedViewConfig {
     type: 'channelFeed';
@@ -12,7 +19,7 @@ export interface ChannelFeedViewConfig {
         displayId: string;
         feedId?: string;
     };
-    options?: WildcardsMap;
+    options?: ChatnelsClientOptions;
     colorScheme?: ColorScheme;
 }
 export interface ChatViewConfig {
@@ -21,10 +28,10 @@ export interface ChatViewConfig {
         displayId: string;
         chatId?: string;
     };
-    options?: WildcardsMap;
+    options?: ChatnelsClientOptions;
     colorScheme?: ColorScheme;
 }
-interface InboxViewOptions extends WildcardsMap {
+interface InboxViewOptions extends ChatnelsClientOptions {
     enableChatMenu?: boolean;
     useExternalCreateChat?: boolean;
     navbarProps?: {
@@ -47,7 +54,7 @@ export interface FlowBotViewConfig {
     data: WildcardsMap & {
         botId: string;
     };
-    options?: WildcardsMap;
+    options?: ChatnelsClientOptions;
     colorScheme?: ColorScheme;
 }
 export interface LineConfigViewConfig {
@@ -55,7 +62,7 @@ export interface LineConfigViewConfig {
     data: WildcardsMap & {
         displayId: string;
     };
-    options?: WildcardsMap;
+    options?: ChatnelsClientOptions;
     colorScheme?: ColorScheme;
 }
 export declare type ChatnelsWidgetConfig = ChannelFeedViewConfig | ChatViewConfig | FlowBotViewConfig | InboxViewConfig | LineConfigViewConfig;
@@ -70,5 +77,8 @@ export interface ChatnelsWidgetProps {
     onError?: (e: WebViewErrorEvent) => void;
     onReady?: () => void;
     onRequestSession?: () => void;
+}
+export interface ChatnelsWidgetHandle {
+    refresh: () => void;
 }
 export {};

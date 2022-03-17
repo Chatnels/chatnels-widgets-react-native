@@ -1,0 +1,1 @@
+{"version":3,"sources":["enums.ts"],"names":["CHANTELS_EVENT_TYPE"],"mappings":";;;;;;IAAYA,mB;;;WAAAA,mB;AAAAA,EAAAA,mB;AAAAA,EAAAA,mB;AAAAA,EAAAA,mB;GAAAA,mB,mCAAAA,mB","sourcesContent":["export enum CHANTELS_EVENT_TYPE {\n  LOAD_SCRIPT_ERROR = 'loadScriptError',\n  APP_READY = 'app:ready',\n  APP_REQUEST_FOCUS = 'app:request:focus',\n}\n"]}
