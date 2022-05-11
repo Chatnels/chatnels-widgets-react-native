@@ -1,1 +1,1 @@
-{"version":3,"sources":["index.tsx"],"names":[],"mappings":";;;;;;;;;;;;AAAA","sourcesContent":["export { ChatnelsWidget } from './ChatnelsWidget';\nexport type { ChatnelsWidgetHandle, ChatnelsWidgetConfig } from './types';\n"]}
+{"version":3,"sources":["index.tsx"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAAA;;AAEA","sourcesContent":["export { ChatnelsWidget } from './ChatnelsWidget';\nexport type { ChatnelsWidgetHandle, ChatnelsWidgetConfig } from './types';\nexport { ChatnelsEventsType } from './enums';\n"]}
