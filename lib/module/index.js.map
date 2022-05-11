@@ -1,1 +1,1 @@
-{"version":3,"sources":["index.tsx"],"names":["ChatnelsWidget","ChatnelsEventsType"],"mappings":"AAAA,SAASA,cAAT,QAA+B,kBAA/B;AAEA,SAASC,kBAAT,QAAmC,SAAnC","sourcesContent":["export { ChatnelsWidget } from './ChatnelsWidget';\nexport type { ChatnelsWidgetHandle, ChatnelsWidgetConfig } from './types';\nexport { ChatnelsEventsType } from './enums';\n"]}
+{"version":3,"sources":["index.js"],"names":["ChatnelsWidget"],"mappings":"AAAA,SAASA,cAAT,QAA+B,kBAA/B","sourcesContent":["export { ChatnelsWidget } from './ChatnelsWidget';\n"]}
